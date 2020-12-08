@@ -8,7 +8,7 @@ To test and learn how to set up a local in ruby using the socket gem and TCP ser
 Finished.
 
 ## Screenshots
-Include logo/demo screenshot etc.
+![Terminal Screen Shot in Use](https://github.com/chriswhitehouse/servers_1/blob/main/Screenshot%202020-12-08%20at%2020.36.39.png)
 
 ## Features
 Add, and view notes, from the terminal to a local server.
