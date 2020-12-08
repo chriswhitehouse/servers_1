@@ -3,12 +3,12 @@ class NotesList
     @notes_list = []
   end
 
-  def add
-    @note = gets.chomp
+  def add(note)
+    @note = note
     @notes_list << @note
   end
 
   def view
-    @notes_list.each { |note| puts note }
+    @notes_list
   end
 end

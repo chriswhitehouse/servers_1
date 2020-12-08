@@ -15,9 +15,20 @@ class Server
     @they_said = ''
     @notes_list = @notes_list_class.new
 
-    until they_said == "quit" do
-      socket.puts "New Note?"
-      @notes_list.add(@they_said)
+    loop do
+      socket.puts "New Note? (new)\nView Note? (view)\nQuit? (quit)"
+      @response = socket.gets.chomp
+
+      if @response == "new" then
+        socket.puts "Enter new note:"
+        @new_note = socket.gets.chomp
+        @notes_list.add(@new_note)
+      elsif @response == "view"
+        socket.puts @notes_list.view
+      else
+        break
+      end
+
     end
     socket.close
   end
